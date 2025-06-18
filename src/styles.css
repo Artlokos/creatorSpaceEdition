@@ -16,14 +16,14 @@
 
 body {
     background-color: #000;
-    background-image: url("/assets/images/Saturn.jpg");
+    /*background-image: url("/assets/images/jpg/Saturn.jpg");*/
     background-repeat: no-repeat;
     font-family: 'Steppe-Book', sans-serif;
     color: white;
 }
 
 .container {
-    max-width: 1200px;
+    max-inline-size: 1200px;
     margin: 0 auto;
 }
 
@@ -74,4 +74,9 @@ body {
     font-size: 60px;
     line-height: 100%;
     text-align: center;
+}
+
+.logo{
+  fill:white;
+  color:white;
 }

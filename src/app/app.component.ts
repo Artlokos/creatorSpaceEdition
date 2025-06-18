@@ -12,7 +12,7 @@ export class AppComponent {
 
   productsData = [
     {
-      image:"1.png",
+      image:"./jpg/1.png",
       title:"Лазерная резка",
       text:"Мы предоставляем полный спектр услуг лазерной резки фанеры, металла и пластика по Вашим эскизам",
       price: 20,
@@ -20,7 +20,7 @@ export class AppComponent {
       weight:""
     },
     {
-      image:"2.png",
+      image:"./jpg/2.png",
       title:"Фрезеровка",
       text:"Все виды фрезеровочных работ, подгонка деталей с точностью до миллиметра",
       price: 24,
@@ -28,7 +28,7 @@ export class AppComponent {
       weight:"2 шт./200 гр."
     },
     {
-      image:"3.png",
+      image:"./jpg/3.png",
       title:"Лазерная гравировка",
       text:"Нанесем надписи, рисунки, номера на ",
       price: 18,
