@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cookies": {
+    "creatorSpaceEdition": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cookies",
+            "outputPath": "dist/creatorSpaceEdition",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -21,13 +21,19 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.css",
+              "src/styles/themes.css",
+              "src/styles/globals.css",
+              "src/styles/from320to768.css",
+              "src/styles/from768to1240.css",
+              "src/styles/from1241.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/scripts/paralax.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -60,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cookies:build:production"
+              "browserTarget": "creatorSpaceEdition:build:production"
             },
             "development": {
-              "browserTarget": "cookies:build:development"
+              "browserTarget": "creatorSpaceEdition:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cookies:build"
+            "browserTarget": "creatorSpaceEdition:build"
           }
         },
         "test": {
@@ -83,11 +89,10 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.css"
             ],
             "scripts": []
           }

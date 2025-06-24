@@ -1,0 +1,98 @@
+
+:root{
+  font-size:10px;
+  --min-viewport: 320px;
+  --max-viewport: 1920px;
+
+  --font-size-small: clamp(0.8rem, 1.5vw, 1rem);
+  --font-size-base: clamp(1.2rem, 2vw,2rem);
+  --font-size-medium: clamp(1.5rem, 2vw, 4.5rem);
+  --font-size-large: clamp(2.5rem, 5vw, 10rem);
+  --font-size-xlarge: clamp(5rem, 10vw, 20rem);
+  --header-height: clamp(198px, 50vh,800px);
+  --header-font-size: clamp(3rem, 8vw, 16.5rem);
+  --header-padding: clamp(1rem, 2vw, 10rem);
+
+  --spacing-small: clamp(0.5rem, 1vw, 1rem);
+  --spacing-medium: clamp(1rem, 2vw, 1.5rem);
+  --spacing-large: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-xlarge: clamp(2rem, 4vw, 3.5rem);
+
+  --max-width: clamp(20rem, 90vw, 75rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "title", monospace;
+  /* border: 1px solid rgb(4, 109, 22); */
+
+}
+
+html {
+  font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - var(--min-viewport)) / (var(--max-viewport) - var(--min-viewport)))), 18px);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+
+  position: relative;
+  min-inline-size: var(--min-viewport);
+  max-inline-size: var(--max-viewport);
+  min-block-size: 100vh;
+
+  margin: 0 auto;
+  padding: 0;
+
+  font-size: var(--font-size-base);
+  color:var(--text-color);
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+a {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+svg{
+  max-height: 100px;
+}
+
+
+@font-face {
+  font-family: 'Steppe-Book';
+  src: url('../assets/fonts/Steppe-Book.ttf');
+}
+
+@font-face {
+  font-family: 'Steppe-Extrabold';
+  src: url('../assets/fonts/Steppe-ExtraBold.ttf');
+}

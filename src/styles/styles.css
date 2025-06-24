@@ -1,26 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-}
+ @import "./globals.css";
+ @import "./themes.css";
+ @import "./from320to768.css";
+ @import "./from768to1240.css";
+ @import "./from1241.css";
 
-@font-face {
-    font-family: 'Steppe-Book';
-    src: url('./assets/fonts/Steppe-Book.ttf');
-}
-
-@font-face {
-    font-family: 'Steppe-Extrabold';
-    src: url('./assets/fonts/Steppe-ExtraBold.ttf');
-}
-
-body {
-    background-color: #000;
-    /*background-image: url("/assets/images/jpg/Saturn.jpg");*/
-    background-repeat: no-repeat;
-    font-family: 'Steppe-Book', sans-serif;
-    color: white;
-}
 
 .container {
     max-inline-size: 1200px;
@@ -77,6 +60,45 @@ body {
 }
 
 .logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo_svg{
   fill:white;
   color:white;
+  inline-size: 260px;
+  block-size: 60px;
+}
+
+@media (width < 769px) {
+
+}
+
+ .image-container {
+   width: 500px;
+   height: 300px;
+   overflow: hidden;
+ }
+
+ .image-with-blurred-edges {
+   height: 100%;
+   object-fit: cover;
+   mask-image:
+     linear-gradient(to bottom, transparent 0%, var(--bg-color) 50%, var(--bg-color) 60%, transparent 100%)
+     ,
+     linear-gradient(to right,  transparent 0%, var(--bg-color) 50%, var(--bg-color) 60%, transparent 100%)
+ ;
+   mask-image: radial-gradient(
+     ellipse at center,
+     var(--bg-color) 10%,
+     transparent 75%
+   );
+ }
+
+.order-block-image{}
+.products{
+  display: flex;
 }

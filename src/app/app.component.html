@@ -5,7 +5,7 @@
   <header class="header">
       <div class="container">
           <div class="logo">
-              <svg>
+              <svg class="logo_svg">
                 <use href="./assets/images/svg/LOGO.svg#logo"/>
               </svg>
           </div>
@@ -15,7 +15,7 @@
                       <a (click)="scrollTo(products)">Каталог</a>
                   </li>
                   <li class="menu-item">
-                      <a (click)="scrollTo(love)">О нас</a>
+                      <a (click)="scrollTo(galery)">О нас</a>
                   </li>
                   <li class="menu-item">
                       <a (click)="scrollTo(order)">Оформление заказа</a>
@@ -34,7 +34,7 @@
                   <button class="button" id="main-action-button" (click)="scrollTo(products)">Заказать</button>
               </div>
           </div>
-          <img src="./assets/images/jpg/main.png" alt="main" class="main-image">
+          <img src="./assets/images/jpg/Saturn.jpg" alt="main" class="main-image image-with-blurred-edges">
       </div>
   </section>
 
@@ -62,16 +62,16 @@
       </div>
   </section>
 
-  <section class="love" id="love" #love>
+  <section class="galery" id="galery" #galery>
       <div class="container">
           <div class="common-title">Мы работаем для Вас</div>
-          <div class="love-items">
-              <div class="love-item love-item-white">
-                  <div class="love-item-title">Мастерская Creator воплощает самые необычные, экстраординарные идеи в жизнь</div>
-                  <div class="love-item-text">С 2020 года наша мастерская помогает творцам, художникам, дизайнерам, инженерам создавать новые, уникальные вещи. Мы
-                  обесечиваем индивидуальный подход к каждому кленту и помогаем воплотить его мечты в реальность.</div>
+          <div class="galery-items">
+              <div class="galery-item galery-item-white">
+                  <div class="galery-item-title">Мастерская Creator воплощает самые необычные, экстраординарные идеи в жизнь</div>
+                  <div class="galery-item-text">С 2020 года наша мастерская помогает творцам, художникам, дизайнерам, инженерам создавать новые, уникальные вещи. Мы
+                  обеспечиваем индивидуальный подход к каждому клиенту и помогаем воплотить его мечты в реальность.</div>
               </div>
-              <div class="love-item love-item-image">
+              <div class="galery-item galery-item-image">
                   <img src="./assets/images/jpg/about1.png" alt="About image">
               </div>
           </div>
@@ -80,10 +80,11 @@
   </section>
 
   <section class="order" id="order" #order>
-<!--      <img src="./assets/images/line3.png" alt="line" class="line3">-->
       <div class="container">
+        <div class="">
+          <img src="./assets/images/jpg/sun1.webp" alt="" class="order-block-image"/>
+        </div>
           <div class="common-title">Оставьте заявку</div>
-          <img src="./assets/images/sun1.webp" alt="breadcrumbs" class="order-bg-image">
           <div class="order-block">
               <div class="order-form">
                   <div class="order-form-text">Заполните данные анкеты и наш сотрудник свяжется с Вами для утончения деталей заказа</div>
@@ -97,15 +98,17 @@
                           <button class="button violet-button" id="order-action" (click)="confirmOrder()" [disabled]="!form.valid">Оформить заявку</button>
                       </div>
               </div>
-              <div class="order-block-image">
-<!--                  <img src="./assets/images/sun2.webp" alt="Cookies" class="order-image">-->
-              </div>
+
           </div>
       </div>
   </section>
 
   <footer class="footer">
-      <div class="logo"><img src="./assets/images/logo1.png" alt="Лого"></div>
-      <div class="rights">«Все права защищены»</div>
+    <div class="logo">
+      <svg class="logo_svg">
+        <use href="./assets/images/svg/LOGO.svg#logo"/>
+      </svg>
+    </div>
+      <div class="rights">«Все права защищены»</div>
   </footer>
 </main>
